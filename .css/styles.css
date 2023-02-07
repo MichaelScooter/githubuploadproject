@@ -34,3 +34,62 @@ img {
     max-width: 100%; /* Bredde må maks fylde 100% */
     height: auto; /* Højden skal tilpasse sig */
 }
+
+.testbox{
+
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 33%;
+    opacity: 0;
+}
+
+.box1 {
+    animation: fadeInFromTop 1s forwards;
+}
+
+.box2 {
+    animation: fadeInFromBottom 1s forwards;
+}
+
+.box3 {
+    animation: fadeInFromRight 1s forwards;
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
